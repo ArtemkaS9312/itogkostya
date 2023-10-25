@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Практическая работа №1</title>
+	<script>
+		let info = {
+			"surname":"Томик", 
+			"name":"Держи", 
+			"patronymic":"Двушкович", 
+			"ocupation":"Преподаватель специальных по подсиживанию", 
+			"degree":"Наивысшее", 
+			"education":"Мирный государственный институт растовой техники (технический университет)", 
+			"qualification":"Инженер-программист инфокоммуникационных систем подсиживания", 
+			"speciality":"Программное обеспечение радиоэлектронных систем нефтевышек", 
+			"discipline":["Основы алгоритмизации и лутания", "Компьютерная графика космодрома"], 
+			"category":"Четвертая", 
+			"exp":"28", 
+			"email":"rust1003@gmail.com", 
+			"site":"Rustafield EU - ODD"
+		};
+		let line = `
+			<p style="font-size: 45px; margin-bottom: 10px;">${info.surname} ${info.name} ${info.patronymic}</p>
+			<h2 style="margin-top: 0px;">${info.ocupation}</h2>
+			<hr>
+				<h4>Основная информация:</h4>
+				<ul>
+					<li><p>Уровень образования: ${info.degree}</p></li>
+					<li><p>Образование: ${info.education}</p></li>
+					<li><p>Квалификация: ${info.qualification}</p></li>
+					<li><p>Специализация: ${info.speciality}</p></li>
+				    <li><p>Преподаваемые дисциплины: </p>
+						<ul type:"circle">
+							<li>${info.discipline[0]}</li>
+							<li>${info.discipline[1]}</li>
+						</ul>
+					</li>	
+				</ul>
+				<h4>Дополнительная информация:</h4>
+				<ul>
+					<li><p>Категория: ${info.category}</p></li>
+					<li><p>Стаж: ${info.exp}</p></li>
+					<li><p>E-mail: ${info.email}</p></li>
+					<li><p>Персональный сайт: ${info.site}</p></li>
+				</ul>
+				
+		`
+		
+	</script>
+</head>
+<body>
+	<style type="text/css">
+		body {
+			
+			padding: 0;
+			margin: 0;
+			background: radial-gradient(circle, rgb(238, 216, 174) 0%, rgb(216, 83, 83) 100%);
+		}
+
+		div{
+			margin-top: 50px;
+			display: flex;
+		    font-size: 19px;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			margin-left: 30px;
+		}
+
+		.glavzag{
+			font-size: 40px;
+		}
+
+		nav {
+		  	display: flex;
+		  	flex-direction: row;
+		  	justify-content: center;
+		  	flex-wrap: wrap;
+		  	background-color: black;
+		  	padding: 20px 10px;
+			
+		}
+
+		nav a {
+		  	color: white;
+			font-style: italic;
+		  	padding: 1px 50px;
+		  	text-decoration: none;
+		  	font-size: 18px; 
+		  	border-radius: 4px;
+		}
+
+		p, ul, li, h2 {
+			margin: 0px;
+		}
+
+		hr {
+			margin: 10px ;
+			padding: 1;
+			height: 1;
+			border: none;
+			border-top: 5px solid #b12a2a;
+		}
+
+		img{
+			width: 450px;
+		}
+	h4{
+		font-style: italic;
+
+	}
+	
+
+	</style>
+
+	<nav>
+		<a>О проекте</a>
+		<a>Курсы</a>
+		<a>Преподаватели</a>
+		<a>Контакты</a>	
+	</nav>
+	<div>
+		<img src='ruster.jpg'>
+		<section class="info">
+			<script type="text/javascript">
+				document.write(line);
+			</script>
+		</section>
+	</div>
+</body>
+</html>
